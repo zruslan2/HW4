@@ -16,20 +16,17 @@ House::House(string adr, int floor, int cRoom, int area)
 	this->area = area;
 }
 
-void House::apartment(int countR, int r)
-{
-	for (int i = 0; i < r; i++)
-	{
+void House::apartment(int countR)
+{	
 		if (this->cRoom == countR)
-			cout << this->adress << "\t" << this->floor << "\t" << this->cRoom << "\t" << this->area << endl;
-	}
+			cout << this->adress << "\t" << this->floor << "\t" << this->cRoom << "\t" << this->area << endl;	
 }
 
 void House::apartment(int countR, int minFloor, int maxFloor, int r)
 {
 	for (int i = 0; i < r; i++)
 	{
-		if(this->cRoom==countR&&(this->floor>minFloor||this->floor<maxFloor))
+		if(this->cRoom==countR&&(this->floor>minFloor&&this->floor<maxFloor))
 			cout << this->adress << "\t" << this->floor << "\t" << this->cRoom << "\t" << this->area << endl;
 	}
 }
