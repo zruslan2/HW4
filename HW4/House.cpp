@@ -22,21 +22,21 @@ void House::apartment(int countR)
 			cout << this->adress << "\t" << this->floor << "\t" << this->cRoom << "\t" << this->area << endl;	
 }
 
-void House::apartment(int countR, int minFloor, int maxFloor, int r)
+void apartment(House *h,int countR, int minFloor, int maxFloor, int r)
 {
 	for (int i = 0; i < r; i++)
 	{
-		if(this->cRoom==countR&&(this->floor>minFloor&&this->floor<maxFloor))
-			cout << this->adress << "\t" << this->floor << "\t" << this->cRoom << "\t" << this->area << endl;
+		if(h[i].cRoom==countR&&(h[i].floor>minFloor&&h[i].floor<maxFloor))
+			cout << h[i].adress << "\t" << h[i].floor << "\t" << h[i].cRoom << "\t" << h[i].area << endl;
 	}
 }
 
-void House::apartment1(int area, int r)
+void apartment1(House *h,int area, int r)
 {
 	for (int i = 0; i < r; i++)
 	{
-		if (this->area > area)
-			cout << this->adress << "\t" << this->floor << "\t" << this->cRoom << "\t" << this->area << endl;
+		if (h[i].area > area)
+			cout << h[i].adress << "\t" << h[i].floor << "\t" << h[i].cRoom << "\t" << h[i].area << endl;
 	}
 }
 

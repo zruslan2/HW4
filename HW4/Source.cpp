@@ -47,7 +47,13 @@ int main()
 			cout << "¬ведите число коснат: ";cin >> cr;
 			cout << "¬ведите мин. этаж: ";cin >> minf;
 			cout << "¬ведите макс. этаж: ";cin >> maxf;
-			h->apartment(cr, minf, maxf,r);
+			apartment(h,cr, minf, maxf,r);
+		}
+		else if (task == 3)
+		{
+			int ar;
+			cout << "¬ведите минимальную площадь: ";cin >> ar;
+			apartment1(h, ar, r);
 		}
 	}
 	system("pause");

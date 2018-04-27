@@ -17,8 +17,8 @@ public:
 	House(string adr, int floor, int cRoom, int area);
 
 	void apartment(int countR);
-	void apartment(int countR, int minFloor, int maxFloor, int r);
-	void apartment1(int area, int r);
+	friend void apartment(House *h, int countR, int minFloor, int maxFloor, int r);
+	friend void apartment1(House *h, int area, int r);
 
 	void print();
 	virtual ~House();
