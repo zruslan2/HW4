@@ -55,6 +55,10 @@ int main()
 			cout << "Введите минимальную площадь: ";cin >> ar;
 			apartment1(h, ar, r);
 		}
+		else
+		{
+			cout << "Такого задание нет" << endl;
+		}
 	}
 	system("pause");
 	return 0;
